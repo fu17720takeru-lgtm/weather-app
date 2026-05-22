@@ -51,7 +51,7 @@ export default async function Home() {
               {weatherData?.map((data) => (
                 <tr key={data.id}>
                   <td className="border p-3">
-                    {new Date(data.datetime).toLocaleString("ja-JP")}
+                    {new Date(data.datetime).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })}
                   </td>
                   <td className="border p-3">{data.area}</td>
                   <td className="border p-3">{data.temperature}℃</td>
